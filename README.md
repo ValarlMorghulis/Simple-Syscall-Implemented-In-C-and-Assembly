@@ -20,7 +20,7 @@ nasm assembly is used to implement a simple OS kernel to realize C program calli
    1. 采用C语言编写示范应用，用于测试OS内核功能，示范应用大致内容如下图所示（仅供参考！！！）；
    2. 采用GCC编译生成ELF32格式代码，并用objcopy等工具提取出相应的代码段和数据段，最后装入1号逻辑扇区开始的连续磁盘空间（由示范应用的大小确定）。
 
-   ![avatar](0.png)
+   ![avatar](assets/0.png)
 
 ## 二、实验工具
 
