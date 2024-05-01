@@ -81,9 +81,9 @@ nasm assembly is used to implement a simple OS kernel to realize C program calli
 
       即在以下两种状态之间切换：
 
-      ![avatar](3.png)
+      ![avatar](assets/3.png)
 
-      ![avatar](4.png)
+      ![avatar](assets/4.png)
 
       1. 设置定时器
 
@@ -176,11 +176,11 @@ nasm assembly is used to implement a simple OS kernel to realize C program calli
 
       因此当从用户进程切换回内核进程执行时，如果需要IRET则需要读取以上内容。为了使IRET后能正确跳转至无限循环处执行，在跳转到应用进程前先模仿硬件中断，将其后续执行代码的CS:IP以及标志寄存器（PSW）的值保存到栈上，如下图所示：
 
-      ![avatar](1.png)
+      ![avatar](assets/1.png)
 
       接着通过改变SP的值，使其转变为用户进程的栈指针，从而实现切换。
 
-      ![avatar](2.png)
+      ![avatar](assets/2.png)
 
       ```assembly
       LOADPROGRAMME:                             ; 加载C程序
@@ -381,7 +381,7 @@ clean:
 
 具体效果在gif文件有呈现
 
-![avatar](out.gif)
+![avatar](assets/out.gif)
 
 ## 五、总结与思考
 
